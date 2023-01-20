@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <img src="images/footer.png" alt="footerImage"/>
        <div >
         <h2>Doormat Navigation</h2>

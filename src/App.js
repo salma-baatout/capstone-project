@@ -15,7 +15,7 @@ function App() {
     <Testimonials/>
     <About/>
     <Footer/>
-    </div> 
+    </div>
 
   );
 }
