@@ -2,54 +2,109 @@ import React from 'react'
 
 const Testimonials = () => {
   return (
-
-<div>
-<section class="home-testimonial">
-    <div class="container-fluid">
-        <div class="row d-flex justify-content-center testimonial-pos">
-            <div class="col-md-12 pt-4 d-flex justify-content-center">
-                <h3>Testimonials</h3>
+    <div className='testcontainer'>
+       <div className='col-md-12'>
+      <h1 className='testTitle'>Testimonials</h1>
+      </div>
+    <div class="container mt-5 mb-5">
+    
+    <div class="row g-2">
+        <div class="col-md-4">
+            <div class="card p-3 text-center px-4">
+                
+                <div class="user-image">
+                    
+            <img src="https://i.imgur.com/w2CKRB9.jpg" class="rounded-circle" width="80"
+                   />
+                    
+                </div>
+                
+                <div class="user-content">
+                    
+                    <h5 class="mb-0">Bruce Hardy</h5>
+                    <span>Software Developer</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    
+                </div>
+                
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    
+                </div>
+                
             </div>
-
         </div>
+        
+        <div class="col-md-4">
+            
+            <div class="card p-3 text-center px-4">
+                
+                <div class="user-image">
+                    
+            <img src="https://i.imgur.com/w2CKRB9.jpg" class="rounded-circle" width="80"
+                    />
+                    
+                </div>
+                
+                <div class="user-content">
+                    
+                    <h5 class="mb-0">Mark Smith</h5>
+                    <span>Web Developer</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    
+                </div>
+                
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    
+                </div>
+                
+            </div>
+            
         </div>
-        <section class="home-testimonial-bottom">
-            <div class="container testimonial-inner">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-md-4 style-3">
-                        <div class="tour-item ">
-                            <div class="tour-desc bg-white">
-                                <div class="tour-text color-grey-3 text-center">&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vero, repudiandae minima labore at eos laudantium omnis, numquam enim magni rem vitae.&rdquo;</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg" alt=""></img></div>
-                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                <div class="link-position d-flex justify-content-center">Client</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 style-3">
-                        <div class="tour-item ">
-                            <div class="tour-desc bg-white">
-                                <div class="tour-text color-grey-3 text-center">&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vero, repudiandae minima labore at eos laudantium omnis, numquam enim magni rem vitae.&rdquo;</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg" alt=""></img></div>
-                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                <div class="link-position d-flex justify-content-center">Client</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 style-3">
-                        <div class="tour-item ">
-                            <div class="tour-desc bg-white">
-                                <div class="tour-text color-grey-3 text-center">&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vero, repudiandae minima labore at eos laudantium omnis, numquam enim magni rem vitae.&rdquo;</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg" alt=""></img></div>
-                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                <div class="link-position d-flex justify-content-center">Client</div>
-                            </div>
-                        </div>
-                    </div>
+        
+        <div class="col-md-4">
+            
+            <div class="card p-3 text-center px-4">
+                
+                <div class="user-image">
+                    
+            <img src="https://i.imgur.com/ACeArwY.jpg" class="rounded-circle" width="80"
+                    />
+                    
                 </div>
+                
+                <div class="user-content">
+                    
+                    <h5 class="mb-0">Veera  Duncan</h5>
+                    <span>Software Architect</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    
                 </div>
-        </section>
-</section>
+                
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    
+</div>
 
 
 
