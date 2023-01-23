@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link} from "react";
 
 const Hero = () => {
   return (
@@ -9,10 +9,10 @@ const Hero = () => {
 
         <div className='col-md-9'>
       <h1 className='titleHome'>Little Lemon</h1>
-      <p className='textHome'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis at optio voluptatibus
-        tempore magnam quasi neque veniam molestias non sint? Eaque beatae commodi recusandae cum,
-            non alias quas voluptates nobis!</p>
+      <p className='textHome'>We are a family owned Mediterranean restaurant, focused on traditioanl recipes served with a modern twist</p>
+          <Link to ="/bookingpage">
           <button className='btnHome'>Reserve a table</button>
+          </Link>
         </div>
 
         <div className='col-md-3'>

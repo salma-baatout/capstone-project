@@ -128,6 +128,7 @@ justify-content: space-between;
 
 .textHome{
   width: 450px;
+  height: 200px;
   color: rgb(255, 255, 255);
   font-size: large;
   text-align: justify;
