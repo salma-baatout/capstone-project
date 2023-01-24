@@ -1,9 +1,10 @@
 import React from 'react'
-import {useContext, useState } from 'react';
+import {useState } from 'react';
 import { Link} from "react-router-dom";
 import DatePicker from 'react-datepicker';
 import FormContext from './context';
 import "react-datepicker/dist/react-datepicker.css";
+
 function Bookingform() {
   const [time, setTime] = useState('');
   const [date, setDate] = useState(new Date());
@@ -16,25 +17,32 @@ function Bookingform() {
     <div>
     <FormContext.Provider value={{ date, time, persons, occasion }}>
     <form>
-      <label>
-        Date:
+    <div className="form-group">
+      <label className='label'>
+        Date:</label>
         <DatePicker
+        className='calendar'
           selected={date}
           onChange={(date) => setDate(date)}
         />
-      </label><br/>
-      <label>
-        Time:
+
+    </div>
+
+      <div className="form-group">
+      <label className='label'>
+        Time:</label >
         <select value={time} onChange={e => setTime(e.target.value)}>
           <option value="" disabled>Select a time</option>
           {availableTimes.map(item => (
             <option key={item} value={item}>{item}</option>
           ))}
         </select>
-      </label>
-      <br />
-      <label>
-        Occasion:
+
+      
+      </div>
+      <div className="form-group">
+      <label className='label'>
+        Occasion:</label>
         <select
           value={occasion}
           onChange={(e) => setOccasion(e.target.value)}>
@@ -43,10 +51,12 @@ function Bookingform() {
           <option value="anniversary">Anniversary</option>
           <option value="other">Other</option>
         </select>
-      </label>
-<br/>
-<label>
-        Indoor/Outdoor:
+        </div>
+      
+
+      <div className="form-group">
+      <label className='label'>
+        Indoor/Outdoor:</label>
         <select
           value={site}
           onChange={(e) => setSite(e.target.value)}>
@@ -54,24 +64,23 @@ function Bookingform() {
           <option value="birthday">Indoor Table</option>
           <option value="anniversary">Outdoor Table</option>
         </select>
-      </label>
-<br/>
 
+</div>
 
-      <label>
-        Number of persons:
+<div className="form-group">
+      <label className='label'>
+        Number of persons:</label>
         <input
           type="number"
           value={persons}
           onChange={(e) => setPersons(e.target.value)}
         />
-      </label>
-      <br/>
 
+      </div>
       <Link to="/">
       <button type="submit" className='btnReserve'>Back</button>
       </Link>
-      <Link to="/PersonalInfo">
+      <Link to='/PersonalInfo'>
       <button type="submit" className='btnReserve'>Reserve</button>
       </Link>
 

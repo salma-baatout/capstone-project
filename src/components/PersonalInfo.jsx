@@ -1,6 +1,7 @@
 import React from 'react'
 import FormContext from './context';
 import {useState,useContext} from 'react';
+import { Link} from "react-router-dom";
 
 const PersonalInfo = () => {
   const [name, setName] = useState('');
@@ -9,7 +10,7 @@ const PersonalInfo = () => {
   const {  date, time, persons, occasion } = useContext(FormContext);
   return (
     <div>
-        <div>personal info
+        <div>personal information
           <h2>Booking information</h2>
           <p>Date: {date}</p>
           <p>Time: {time}</p>
@@ -36,6 +37,14 @@ const PersonalInfo = () => {
       </form>
     </FormContext.Provider>
 </div>
+      <div>
+      <Link to="/checkout">
+      <button type="submit" className='btnReserve'>Checkout</button>
+      </Link>
+      <Link to='/Bookingpage'>
+      <button type="submit" className='btnReserve'>Back</button>
+      </Link>
+      </div>
         </div>
   )
 }
