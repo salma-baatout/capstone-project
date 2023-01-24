@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link} from "react";
+import { Link} from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -10,7 +10,7 @@ const Hero = () => {
         <div className='col-md-9'>
       <h1 className='titleHome'>Little Lemon</h1>
       <p className='textHome'>We are a family owned Mediterranean restaurant, focused on traditioanl recipes served with a modern twist</p>
-          <Link to ="/bookingpage">
+      <Link to="/Bookingpage">
           <button className='btnHome'>Reserve a table</button>
           </Link>
         </div>

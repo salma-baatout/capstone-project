@@ -11,6 +11,74 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*bookingPage*/
+.scrolling-title{
+  background-color: #495E57;
+
+}
+.scrolling-title h1 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scroll-title 20s linear infinite;
+}
+
+.scrolling-title h1 {
+  display: inline-block;
+}
+
+@keyframes scroll-title {
+  from {
+    transform: translateX(90%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.reserveTitle{
+  color:white;
+  text-align:center;
+
+}
+.form{
+  margin-top: 5%;
+  padding:5%;
+  background-color:white;
+  border-color: #495E57;
+  border-style: double;
+  border-radius: 5%;
+}
+.bookingpic{
+  border-radius: 3%;
+  height:630px;
+  width:450px;
+  
+  display: flex; /* makes the image a flex element */
+  margin: auto; /* centers the image horizontally and vertically */
+
+}
+.homeIcon{
+  height:50px;
+  width:50px;
+}
+.btnReserve{
+  background-color: #495E57 ;
+  color: white;
+  border-radius: 5px;
+  font-size: larger;
+  margin: 5px;
+  padding: 8px;
+  font-weight: 500;
+  border: none;
+  width:100px;
+}
+
+.btnReserve:hover {
+  background-color:black ;
+  color:white;
+}
 /* navbar */
 
 nav {
@@ -120,7 +188,6 @@ nav ul {
   margin: 0;
   height: 370px;
   margin-top: -20px !important;
-
 }
 .container{
 justify-content: space-between;
@@ -152,6 +219,7 @@ justify-content: space-between;
   padding: 8px;
   font-weight: 500;
   border: none;
+  
 }
 
 .btnHome:hover {

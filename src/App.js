@@ -1,30 +1,23 @@
 
 import './App.css';
-import Header from "./components/Header";
-import Hero from './components/Hero';
-import Highlights from './components/Highlights';
-import Testimonials from './components/Testimonials';
-import About from './components/About';
-import Footer from './components/Footer';
-import BookingPage from './components/Bookingpage'
 
-import {Route,Routes} from 'react';
+import BookingPage from './components/Bookingpage'
+import Home from './components/Home'
+import {Route,Routes} from 'react-router-dom';
+import PersonalInfo from './components/PersonalInfo';
 
 function App() {
   return (
 <div className='App.css'>
-  <Routes>
-  <Route path="/bookingpage" element={<BookingPage />}></Route>
-  </Routes>
-<Header/>
-<Hero/>
-<Highlights/>
-<Testimonials/>
-<About/>
-<Footer/>
 
+<Routes>
+<Route path='/' element={<Home />}></Route>
+<Route path='/bookingpage' element={<BookingPage />}></Route>
+<Route path='/PersonalInfo' element={<PersonalInfo />}></Route>
 
-    </div>
+</Routes>
+
+</div>
 
   );
 }

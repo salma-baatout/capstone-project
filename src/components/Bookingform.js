@@ -1,30 +1,28 @@
 import React from 'react'
-import { useState } from 'react';
-
+import {useContext, useState } from 'react';
+import { Link} from "react-router-dom";
+import DatePicker from 'react-datepicker';
+import FormContext from './context';
+import "react-datepicker/dist/react-datepicker.css";
 function Bookingform() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
   const [time, setTime] = useState('');
-  const [availableTimes, setAvailableTimes] = useState(['8:00', '9:00', '10:00', '11:00']);
+  const [date, setDate] = useState(new Date());
+  const [persons, setPersons] = useState('');
+  const [occasion, setOccasion] = useState('');
+  const [site,setSite] = useState('');
+  const [availableTimes] = useState(['8:00 PM', '9:00 PM', '10:00 PM', '11:00 PM']);
 
   return (
+    <div>
+    <FormContext.Provider value={{ date, time, persons, occasion }}>
     <form>
       <label>
-        Name:
-        <input type="text" value={name} onChange={e => setName(e.target.value)} />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
-      </label>
-      <br />
-      <label>
-        Phone:
-        <input type="tel" value={phone} onChange={e => setPhone(e.target.value)} />
-      </label>
-      <br />
+        Date:
+        <DatePicker
+          selected={date}
+          onChange={(date) => setDate(date)}
+        />
+      </label><br/>
       <label>
         Time:
         <select value={time} onChange={e => setTime(e.target.value)}>
@@ -35,7 +33,53 @@ function Bookingform() {
         </select>
       </label>
       <br />
+      <label>
+        Occasion:
+        <select
+          value={occasion}
+          onChange={(e) => setOccasion(e.target.value)}>
+          <option value="" disabled>Select an occasion</option>
+          <option value="birthday">Birthday</option>
+          <option value="anniversary">Anniversary</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+<br/>
+<label>
+        Indoor/Outdoor:
+        <select
+          value={site}
+          onChange={(e) => setSite(e.target.value)}>
+          <option value="" disabled>Select a choice</option>
+          <option value="birthday">Indoor Table</option>
+          <option value="anniversary">Outdoor Table</option>
+        </select>
+      </label>
+<br/>
+
+
+      <label>
+        Number of persons:
+        <input
+          type="number"
+          value={persons}
+          onChange={(e) => setPersons(e.target.value)}
+        />
+      </label>
+      <br/>
+
+      <Link to="/">
+      <button type="submit" className='btnReserve'>Back</button>
+      </Link>
+      <Link to="/PersonalInfo">
+      <button type="submit" className='btnReserve'>Reserve</button>
+      </Link>
+
     </form>
+    </FormContext.Provider>
+
+
+    </div>
   );
 }
 
