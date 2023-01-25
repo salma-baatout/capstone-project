@@ -13,6 +13,12 @@ code {
 }
 
 /*bookingPage*/
+
+.bookButtons{
+  display: flex;
+  justify-content: center;
+align-items: center;
+}
 .label{
   font-size: 18px;
   font-weight: bold;
@@ -21,17 +27,19 @@ code {
 .form-group {
   display: flex; /* enable flexbox layout */
   align-items: center; /* align items vertically */
+  
 }
 
 .form-group label {
   flex: 1; /* take up 1 unit of available space */
-  text-align: left; /* align text to the right */
+  text-align: left; /* align text to the leftt */
   padding-right: 10px; /* add some spacing between label and input */
 }
 
 .form-group input {
   flex: 2; /* take up 2 units of available space */
 }
+
 .form-group select {
   flex: 2; /* take up 2 units of available space */
 }
@@ -39,7 +47,9 @@ code {
 
 .calendar {
   flex: 2; /* take up 2 units of available space */
+  margin-right:auto;
 }
+
 .scrolling-title{
   background-color: #495E57;
 
@@ -75,13 +85,13 @@ code {
   background-color:white;
   border-color: #495E57;
   border-style: double;
-  border-radius: 5%;
+
 }
 .bookingpic{
-  border-radius: 3%;
+  padding-top: 50px;
+  padding-bottom: 90px;
   height:630px;
-  width:450px;
-  
+  width:470px;
   display: flex; /* makes the image a flex element */
   margin: auto; /* centers the image horizontally and vertically */
 

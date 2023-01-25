@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link} from "react-router-dom";
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
@@ -14,9 +14,9 @@ const Header = () => {
     <img className='navPic' src="images/logo.png" alt="logo"  />
       <ul className={navbarOpen ? 'showing' : ''}>
         <li><a href="#home">Home</a></li>
-        <li><a href="#home">About</a></li>
+        <li><Link to="/about">About</Link></li>
         <li><a href="#home">Menu</a></li>
-        <li><a href="#home">Reservations</a></li>
+        <li><Link to="/bookingpage"> Reservations</Link></li>
         <li><a href="#home">Order Online</a></li>
         <li><a href="#home">Login</a></li>
       </ul>

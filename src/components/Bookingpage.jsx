@@ -10,7 +10,7 @@ const BookingPage = () => {
 
 <div className='col-md-8'>
 <div>
-<Link to="/Home">
+<Link to="/">
 <img className='homeIcon' src="images/home icon.png" alt="homeicon" />
 </Link>
 </div>

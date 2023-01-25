@@ -15,7 +15,7 @@ const About = () => {
 
         <div className='col-md-6'>
 
-    <img src="images/Mario and Adrian A.jpg" class="overlay" alt="owners"/>
+    <img src="images/Mario and Adrian A.jpg" className="overlay" alt="owners"/>
     
     </div>
 

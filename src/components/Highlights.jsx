@@ -7,7 +7,7 @@ const Highlights = () => {
         <div className="container">
           <div className='titleandbutton'>
           <h1 className='header-title'>This weeks specials !</h1>
-          <button class="menu-button">Online menu</button>
+          <button className="menu-button">Online menu</button>
           </div>
           <div className="row">
             <div className="col-md-4">
@@ -18,7 +18,7 @@ const Highlights = () => {
             <span className='price'>12.99$</span>
             </div>
             <p className='textHigh'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vero, repudiandae minima labore at eos laudantium omnis, numquam enim magni rem vitae ipsum dolores iusto aperiam sequi. Amet, nihil quibusdam.</p>
-            <a href="#delivery" class="delivery">Order a delivery</a>
+            <a href="#delivery" className="delivery">Order a delivery</a>
             </div>
             </div>
 
@@ -30,7 +30,7 @@ const Highlights = () => {
             <span className='price'>12.99$</span>
             </div>
             <p className='textHigh'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vero, repudiandae minima labore at eos laudantium omnis, numquam enim magni rem vitae ipsum dolores iusto aperiam sequi. Amet, nihil quibusdam.</p>
-            <a href="#delivery" class="delivery">Order a delivery</a>
+            <a href="#delivery" className="delivery">Order a delivery</a>
             </div>
             </div>
 
@@ -42,7 +42,7 @@ const Highlights = () => {
             <span className='price'>12.99$</span>
             </div>
             <p className='textHigh'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vero, repudiandae minima labore at eos laudantium omnis, numquam enim magni rem vitae ipsum dolores iusto aperiam sequi. Amet, nihil quibusdam.</p>
-            <a href="#delivery" class="delivery">Order a delivery</a>
+            <a href="#delivery" className="delivery">Order a delivery</a>
             </div>
             </div>
 

@@ -1,12 +1,12 @@
 import React from 'react'
-import {useState } from 'react';
+import {useState,useContext } from 'react';
+import FormContext from './context';
 import { Link} from "react-router-dom";
 import DatePicker from 'react-datepicker';
-import FormContext from './context';
 import "react-datepicker/dist/react-datepicker.css";
 
 function Bookingform() {
-  const [time, setTime] = useState('');
+  const [time, setTime] = useState('')
   const [date, setDate] = useState(new Date());
   const [persons, setPersons] = useState('');
   const [occasion, setOccasion] = useState('');
@@ -15,7 +15,7 @@ function Bookingform() {
 
   return (
     <div>
-    <FormContext.Provider value={{ date, time, persons, occasion }}>
+    <FormContext.Provider value={{ date, time, persons,site, occasion }}>
     <form>
     <div className="form-group">
       <label className='label'>
@@ -38,7 +38,7 @@ function Bookingform() {
           ))}
         </select>
 
-      
+        
       </div>
       <div className="form-group">
       <label className='label'>
@@ -76,18 +76,23 @@ function Bookingform() {
           onChange={(e) => setPersons(e.target.value)}
         />
 
-      </div>
+      </div >
+      </form>
+   
+
+
+      </FormContext.Provider>
+
+      <div className='bookButtons'>
       <Link to="/">
       <button type="submit" className='btnReserve'>Back</button>
       </Link>
-      <Link to='/PersonalInfo'>
+      <Link to='/personalinfo'>
       <button type="submit" className='btnReserve'>Reserve</button>
       </Link>
+      </div>
 
-    </form>
-    </FormContext.Provider>
-
-
+    
     </div>
   );
 }

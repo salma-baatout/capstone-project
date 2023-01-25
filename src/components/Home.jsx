@@ -5,7 +5,7 @@ import Highlights from './Highlights';
 import Testimonials from './Testimonials';
 import About from './About';
 import Footer from './Footer';
-
+import FormContext from './context';
 const Home = () => {
   return (
     <div>

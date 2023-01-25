@@ -7,18 +7,24 @@ const PersonalInfo = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const {  date, time, persons, occasion } = useContext(FormContext);
+  const { date, time, persons, occasion,site} = useContext(FormContext);
   return (
+
     <div>
+
         <div>personal information
           <h2>Booking information</h2>
-          <p>Date: {date}</p>
+          <p>Date: {date.toLocaleDateString()}</p>
           <p>Time: {time}</p>
           <p>Number of persons: {persons}</p>
           <p>Occasion: {occasion}</p>
+          <p>Site: {site}</p>
+          
         </div>
+
+      
+
         <div>
-    <FormContext.Provider value={{ name, email, phone }}>
     <form>
       <label>
         Name:
@@ -35,8 +41,8 @@ const PersonalInfo = () => {
         <input type="tel" value={phone} onChange={e => setPhone(e.target.value)} />
       </label>
       </form>
-    </FormContext.Provider>
-</div>
+      </div>
+
       <div>
       <Link to="/checkout">
       <button type="submit" className='btnReserve'>Checkout</button>
@@ -45,7 +51,8 @@ const PersonalInfo = () => {
       <button type="submit" className='btnReserve'>Back</button>
       </Link>
       </div>
-        </div>
+
+      </div>
   )
 }
 
