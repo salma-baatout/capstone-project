@@ -1,21 +1,18 @@
-import React from 'react'
-import {useState,useContext } from 'react';
-import FormContext from './context';
+import React, { useContext } from 'react'
+import {useState} from 'react';
+import FormContext from '../contexts/context';
 import { Link} from "react-router-dom";
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
 function Bookingform() {
-  const [time, setTime] = useState('')
-  const [date, setDate] = useState(new Date());
-  const [persons, setPersons] = useState('');
-  const [occasion, setOccasion] = useState('');
-  const [site,setSite] = useState('');
+  const {date,setDate, time,setTime, persons,setPersons, occasion,setOccasion , site,setSite}=useContext(FormContext);
   const [availableTimes] = useState(['8:00 PM', '9:00 PM', '10:00 PM', '11:00 PM']);
 
   return (
+
     <div>
-    <FormContext.Provider value={{ date, time, persons,site, occasion }}>
+   <FormContext.Provider value={{date, time, persons,site, occasion }}>
     <form>
     <div className="form-group">
       <label className='label'>
@@ -31,19 +28,18 @@ function Bookingform() {
       <div className="form-group">
       <label className='label'>
         Time:</label >
-        <select value={time} onChange={e => setTime(e.target.value)}>
+        <select className='input' value={time} onChange={e => setTime(e.target.value)}>
           <option value="" disabled>Select a time</option>
           {availableTimes.map(item => (
             <option key={item} value={item}>{item}</option>
           ))}
         </select>
-
-        
       </div>
       <div className="form-group">
       <label className='label'>
         Occasion:</label>
         <select
+        className='input'
           value={occasion}
           onChange={(e) => setOccasion(e.target.value)}>
           <option value="" disabled>Select an occasion</option>
@@ -52,12 +48,13 @@ function Bookingform() {
           <option value="other">Other</option>
         </select>
         </div>
-      
+
 
       <div className="form-group">
       <label className='label'>
         Indoor/Outdoor:</label>
         <select
+        className='input'
           value={site}
           onChange={(e) => setSite(e.target.value)}>
           <option value="" disabled>Select a choice</option>
@@ -68,18 +65,17 @@ function Bookingform() {
 </div>
 
 <div className="form-group">
-      <label className='label'>
+      <label className='label' htmlFor="quantity">
         Number of persons:</label>
         <input
+        id="quantity" name="quantity" min="1" max="20"
+        className='input'
           type="number"
           value={persons}
           onChange={(e) => setPersons(e.target.value)}
         />
-
       </div >
       </form>
-   
-
 
       </FormContext.Provider>
 
@@ -92,8 +88,9 @@ function Bookingform() {
       </Link>
       </div>
 
-    
+
     </div>
+
   );
 }
 

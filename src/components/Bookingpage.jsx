@@ -2,6 +2,7 @@ import React from 'react'
 import Bookingform from './Bookingform'
 import { Link} from "react-router-dom";
 
+
 const BookingPage = () => {
 
   return (

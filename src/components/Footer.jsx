@@ -9,7 +9,7 @@ const Footer = () => {
               <img src="images/footer.png" alt="footerImage"/>
               </div>
               <div className='col-md-3 spacr spacl' >
-              <h2>Doormat Navigation</h2>
+              <h3>Doormat Navigation</h3>
               <ul>
               <li>Home</li>
               <li>About</li>
@@ -21,7 +21,7 @@ const Footer = () => {
               </ul>
               </div>
               <div className='col-md-3 spacr spacl'>
-              <h2>Contact</h2>
+              <h3>Contact</h3>
               <ul>
               <li>Adress</li>
               <li>Email</li>
@@ -29,7 +29,7 @@ const Footer = () => {
               </ul>
               </div>
               <div className='col-md-3 spacl'>
-              <h2>Social Media</h2>
+              <h3>Social Media</h3>
               <ul>
               <li>Instagram</li>
               <li>Facebook</li>

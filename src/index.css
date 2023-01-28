@@ -11,7 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/*personal info*/
+.input{
+  border-width: 2px;
+  border-radius: 10px;
+}
+.persocontainer{
+  display:flex;
+  justify-content: center;
+  margin-top:50px;
 
+  }
+
+  .personal {
+    margin: auto;
+  }
+h2{
+  padding:5%;
+  color:white;
+  text-align:center;
+  background-color: #495E57;
+  font-size: 26px;
+  font-weight: bold;
+  height: auto;
+  
+}
+.clientName{
+text-align: center;
+font-size: 30px;
+}
 /*bookingPage*/
 
 .bookButtons{
